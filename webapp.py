@@ -7,7 +7,7 @@ webApp class
  Copyright Jesus M. Gonzalez-Barahona and Gregorio Robles (2009-2015)
  jgb @ gsyc.es
  TSAI, SAT and SARO subjects (Universidad Rey Juan Carlos)
- October 2009 - March 2017
+ October 2009 - February 2015
 """
 
 import socket
@@ -58,7 +58,7 @@ class webApp:
             (returnCode, htmlAnswer) = self.process(parsedRequest)
             print('Answering back...')
             recvSocket.send(bytes("HTTP/1.1 " + returnCode + " \r\n\r\n"
-                            + htmlAnswer + "\r\n", 'utf-8))
+                            + htmlAnswer + "\r\n", 'utf-8'))
             recvSocket.close()
 
 if __name__ == "__main__":
